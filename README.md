@@ -188,7 +188,7 @@ poster/
 Thermal Engineering and Laser Applications (TELA) Lab  
 Chung-Ang University  
 Advisor: Prof. Jung Bin In 
-Mentor: Ph.D. Candidate Changyoung Ryu 
+Mentor: Ph.D. Candidate Changyoung Ryu
 Program: 2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program) 
 Chung-Ang University
 
