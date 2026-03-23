@@ -193,7 +193,7 @@ Future work includes electro-thermal co-simulation and nonlinear fracture modeli
 
 ## Repository Structure
 
-'''bash
+```bash
 Reliability-Driven-TGV-Design
 │
 ├── 01_mesh_validation/
@@ -227,7 +227,7 @@ Reliability-Driven-TGV-Design
 │
 └── poster/
     └── Winter_MeSTeR_Poster.pdf
-'''
+```
 
 ---
 
