@@ -3,7 +3,9 @@ Reliability-driven thermo-mechanical optimization of redundant Through-Glass Via
 
 # Reliability-Driven Optimization of Redundant Through-Glass Via (TGV)
 
-This research was conducted during a 10-week intensive research program in the lab of **Prof. Jung Bin In, Chung-Ang University**.
+This research was conducted in the Thermal Engineering and Laser Applications (TELA) Lab, led by Prof. Jung Bin In at Chung-Ang University.
+
+The project was independently designed and executed as part of a 10-week intensive research program.
 
 Supervised by Ph.D. candidate Changyoung Ryu.
 
@@ -181,10 +183,13 @@ docs/
 poster/
 
 ---
+## Research Environment
 
-## Program Information
-
-2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program)  
+Thermal Engineering and Laser Applications (TELA) Lab  
+Chung-Ang University  
+Advisor: Prof. Jung Bin In 
+Mentor: Ph.D. Candidate Changyoung Ryu 
+Program: 2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program) 
 Chung-Ang University
 
 ---
