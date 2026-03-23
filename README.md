@@ -186,3 +186,10 @@ poster/
 
 2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program)  
 Chung-Ang University
+
+---
+
+## Author
+
+**Kyungwoo Lee**  
+Undergraduate Student, Mechanical Engineering
