@@ -82,34 +82,23 @@ To approach realistic packaging conditions:
 
 Fracture mechanics criterion applied:
 
-\[
-K_I = Y \sigma \sqrt{\pi a}
-\]
+K_I = Y · σ · √(πa)
 
 Assumptions:
 
 - Borosilicate glass  
-- \( K_{IC} = 0.75–0.90 \, MPa \cdot m^{0.5} \)  
-- Crack size \( a = 10 \, μm \)  
-- Geometry factor \( Y = 1.12 \) (surface crack assumption)
+- K_IC = 0.75–0.90 MPa·m^0.5
+- Crack size a = 10 μm  
+- Geometry factor Y = 1.12 (surface crack assumption)
 
 Derived critical stress:
-
-\[
-\sigma_{critical} = 119.5 \, MPa
-\]
+σ_critical = 119.5 MPa
 
 Using linear regression, allowable volumetric heat generation:
-
-\[
-q'''_{max} = 0.4594 \, GW/m^3
-\]
+q'''_max = 0.4594 GW/m³
 
 Equivalent allowable RF power:
-
-\[
-\approx 12 \, mW
-\]
+≈ 12 mW
 
 **Key Contribution:**  
 Unlike configuration-only studies, this work derives an allowable RF power limit based on fracture mechanics applied to a realistic packaging-scale model.
@@ -129,16 +118,11 @@ Geometric constraints:
 - Aspect ratio: 10:1  
 
 Feasible taper range:
-
-\[
-85° \leq \theta \leq 90°
-\]
+85° ≤ θ ≤ 90°
 
 Process capability limit:
+θ_max ≈ 88.854°
 
-\[
-\theta_{max} \approx 88.854°
-\]
 
 **Result:**
 
