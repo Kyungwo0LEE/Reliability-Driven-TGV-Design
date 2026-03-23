@@ -1,173 +1,191 @@
-# Reliability-Driven-TGV-Design
-Reliability-driven thermo-mechanical optimization of redundant Through-Glass Via (TGV) structures under RF-induced volumetric heat generation using FEM simulation.
-
 # Reliability-Driven Optimization of Redundant Through-Glass Via (TGV)
 
-This research was conducted in the Thermal Engineering and Laser Applications (TELA) Lab, led by Prof. Jung Bin In at Chung-Ang University.
-
-The project was independently designed and executed as part of a 10-week intensive research program.
-
-Supervised by Ph.D. candidate Changyoung Ryu.
+This research was conducted in the **Thermal Engineering and Laser Applications (TELA) Lab** at Chung-Ang University under the supervision of **Prof. Jung Bin In**.  
+The project was independently designed and executed during a 10-week intensive research program (2025 Winter MeSTeR).
 
 ---
 
-## Research Context
+## Research Significance
 
-With the rapid growth of AI and high-frequency RF systems, glass interposers with Through-Glass Vias (TGVs) are emerging as a next-generation packaging technology due to:
+High-frequency RF and AI-driven semiconductor systems require reliable glass interposer technologies.  
+Through-Glass Via (TGV) structures offer low dielectric loss and high-frequency compatibility, but their practical scalability is limited by:
 
-- Low dielectric constant (reduced signal loss)
-- High-frequency compatibility
-- Laser-based microfabrication capability
+- Low thermal conductivity of glass  
+- Brittle fracture behavior  
+- Severe thermo-mechanical stress concentration at the Cu–glass interface  
 
-However, glass substrates exhibit:
+Under RF-induced volumetric heat generation, these limitations significantly increase crack initiation risk.
 
-- Low thermal conductivity
-- Brittle fracture behavior
-- Severe thermo-mechanical stress concentration at the Cu–glass interface
+This project establishes a **fracture-informed, reliability-driven design framework** for redundant TGV structures by integrating:
 
-Under RF-induced volumetric heat generation, these characteristics significantly increase crack initiation risk.
+- Thermal analysis  
+- Structural mechanics  
+- Fracture mechanics  
+- Manufacturing constraints  
 
-This project aims to establish a **reliability-driven geometric design framework** for redundant TGV structures.
+The study moves beyond simple configuration comparison and derives physically grounded design limits.
 
 ---
 
 ## Core Research Question
 
-> What redundant TGV configuration and taper geometry maximize thermo-mechanical reliability under RF-induced volumetric heat generation while satisfying fracture constraints?
+> What redundant TGV configuration and taper geometry maximize thermo-mechanical reliability under RF-induced heating while satisfying fracture constraints?
 
 ---
 
-## Research Strategy
+## Research Methodology
 
-The project was structured as a staged engineering investigation:
-
-### 1. Mesh Convergence Validation
-- Element size variation study
-- Nonlinear regression using Levenberg–Marquardt algorithm
-- Converged temperature: T∞ = 29.763 °C
-- Optimal setting: Refinement level 2, Transition slow
-
-Purpose:
-Ensure simulation credibility before structural comparison.
+The investigation was structured as a staged engineering framework:
 
 ---
 
-### 2. Redundant Configuration Study (Single–Penta)
+### 1️⃣ Mesh Convergence Validation
 
-- 80 μm fixed pad width
-- 25 ms RF-induced volumetric heat generation
-- Convection coefficient h = 10 W/m²K
-- Bottom surface fixed support
-- Thermo-mechanical coupling
+- Element size variation study  
+- Nonlinear regression using the Levenberg–Marquardt algorithm  
+- Converged temperature: **T∞ = 29.763 °C**  
+- Optimal setting: Refinement level 2, Transition slow  
 
-Result:
-- Dual redundant TGV showed the lowest maximum principal stress (16.4 MPa)
-- Increasing via count reduces current per via but increases interfacial interaction
-
-Engineering Insight:
-Stress reduction is not monotonic with via count — geometric interaction dominates beyond dual configuration.
+**Purpose:**  
+Ensure mesh-independent simulation credibility before structural comparison.
 
 ---
 
-### 3. Scale-Up Packaging Model
+### 2️⃣ Redundant Configuration Study (Single–Penta)
+
+Boundary conditions:
+
+- Fixed pad width: 80 μm  
+- RF-induced volumetric heat generation (25 ms transient)  
+- Convection coefficient: h = 10 W/m²K  
+- Bottom surface fixed support  
+- Thermo-mechanical coupling  
+
+**Result:**
+
+- Dual redundant TGV achieved the lowest maximum principal stress (**16.4 MPa**)  
+- Increasing via count reduces current per via but increases interfacial interaction  
+
+**Engineering Insight:**  
+Stress reduction is not monotonic with via count — geometric interaction dominates beyond the dual configuration.
+
+---
+
+### 3️⃣ Scale-Up Packaging Model
 
 To approach realistic packaging conditions:
 
-- Added Cu pad
-- Added upper/lower Si blocks
-- 42 dual redundant TGVs
-- Full thermo-mechanical coupling
+- Added Cu pad  
+- Added upper and lower Si blocks  
+- 42 dual redundant TGVs  
+- Full thermo-mechanical coupling  
 
-Fracture criterion applied:
+Fracture mechanics criterion applied:
 
-K_I = Y σ √(πa)
+\[
+K_I = Y \sigma \sqrt{\pi a}
+\]
 
 Assumptions:
-- Borosilicate glass
-- K_IC = 0.75–0.90 MPa·m^0.5
-- Crack size a = 10 μm
-- Y = 1.12 (surface crack)
+
+- Borosilicate glass  
+- \( K_{IC} = 0.75–0.90 \, MPa \cdot m^{0.5} \)  
+- Crack size \( a = 10 \, μm \)  
+- Geometry factor \( Y = 1.12 \) (surface crack assumption)
 
 Derived critical stress:
-σ_critical = 119.5 MPa
 
-Using linear regression:
-Allowable volumetric heat generation:
+\[
+\sigma_{critical} = 119.5 \, MPa
+\]
 
-q'''_max = 0.4594 GW/m³
+Using linear regression, allowable volumetric heat generation:
+
+\[
+q'''_{max} = 0.4594 \, GW/m^3
+\]
 
 Equivalent allowable RF power:
-≈ 12 mW
+
+\[
+\approx 12 \, mW
+\]
+
+**Key Contribution:**  
+Unlike configuration-only studies, this work derives an allowable RF power limit based on fracture mechanics applied to a realistic packaging-scale model.
 
 ---
 
-### 4. Taper Angle Optimization (Process-Aware Design)
+### 4️⃣ Taper Angle Optimization (Process-Aware Design)
 
-Manufacturing constraint:
-Laser-induced wet etching produces tapered via geometry.
+Manufacturing reality:
+
+Laser-induced wet etching produces naturally tapered via geometries.
 
 Geometric constraints:
-- Opening diameter = 20 μm
-- Pad width = 80 μm
-- Aspect ratio = 10:1
 
-Feasible range:
-85° ≤ taper ≤ 90°
+- Opening diameter: 20 μm  
+- Pad width: 80 μm  
+- Aspect ratio: 10:1  
 
-Process capability:
-Max achievable ≈ 88.854°
+Feasible taper range:
 
-Result:
+\[
+85° \leq \theta \leq 90°
+\]
+
+Process capability limit:
+
+\[
+\theta_{max} \approx 88.854°
+\]
+
+**Result:**
+
 Optimal reliability range:
-87°–88°
 
-Insight:
-Taper geometry affects axial stress redistribution and interfacial stress concentration.
+\[
+87° – 88°
+\]
+
+**Insight:**  
+Taper geometry affects axial stress redistribution and interfacial stress concentration, directly influencing thermo-mechanical reliability.
 
 ---
 
 ## Boundary Conditions Summary
 
-Thermal:
-- Uniform volumetric heat generation in Cu via
-- Convection h = 10 W/m²K on external surfaces
-- Insulated lateral surfaces
+### Thermal
 
-Structural:
-- Fixed support on glass bottom
-- Linear elastic materials
-- Thermal expansion included
+- Uniform volumetric heat generation in Cu via  
+- Convection: h = 10 W/m²K on external surfaces  
+- Insulated lateral surfaces  
+
+### Structural
+
+- Fixed support at glass bottom surface  
+- Linear elastic material model  
+- Thermal expansion included  
 
 ---
 
 ## Engineering Contributions
 
-- Reliability-based redundant TGV selection framework
-- Fracture-informed allowable RF power derivation
-- Process-constrained taper optimization
-- Multi-stage validation (mesh → configuration → scale-up → manufacturing)
+- Reliability-based redundant TGV selection framework  
+- Fracture-informed allowable RF power derivation  
+- Process-constrained taper optimization  
+- Multi-stage validation: mesh → configuration → scale-up → manufacturing  
 
-This work provides a design guideline for next-generation high-frequency and AI packaging systems.
-
----
-
-## My Role
-
-- Designed and built all ANSYS FEM models
-- Performed mesh convergence validation
-- Implemented nonlinear regression scripts in Python
-- Derived fracture-based allowable power limits
-- Conducted taper geometry optimization study
-- Structured the staged engineering investigation
+This work provides a design guideline for next-generation high-frequency and AI semiconductor packaging systems.
 
 ---
 
 ## Limitations
 
-- Linear elastic material assumption
-- No electro-thermal coupling
-- No experimental validation
-- Constant convection coefficient assumption
+- Linear elastic material assumption  
+- No electro-thermal coupling  
+- Constant convection coefficient assumption  
+- No experimental validation  
 
 Future work includes electro-thermal co-simulation and nonlinear fracture modeling.
 
@@ -175,26 +193,57 @@ Future work includes electro-thermal co-simulation and nonlinear fracture modeli
 
 ## Repository Structure
 
-01_mesh_validation/  
-02_redundant_configuration_study/  
-03_scale_up_model/  
-04_taper_angle_optimization/  
-docs/  
-poster/
+'''bash
+Reliability-Driven-TGV-Design
+│
+├── 01_mesh_validation/
+│   ├── ANSYS setup files
+│   ├── Mesh convergence data
+│   └── Nonlinear regression scripts
+│
+├── 02_redundant_configuration_study/
+│   ├── Single–Penta configuration models
+│   ├── Stress comparison data
+│   └── Result figures
+│
+├── 03_scale_up_model/
+│   ├── Packaging-scale FEM model
+│   ├── Fracture-based allowable power derivation
+│   └── Regression analysis
+│
+├── 04_taper_angle_optimization/
+│   ├── Process-aware geometry models
+│   ├── Taper angle sensitivity analysis
+│   └── Reliability comparison
+│
+├── docs/
+│   ├── boundary_conditions.md
+│   ├── methodology.md
+│   ├── material_properties.md
+│   └── assumptions_and_limitations.md
+│
+├── figures/
+│   └── Key result visualizations
+│
+└── poster/
+    └── Winter_MeSTeR_Poster.pdf
+'''
 
 ---
+
 ## Research Environment
 
 Thermal Engineering and Laser Applications (TELA) Lab  
 Chung-Ang University  
-Advisor: Prof. Jung Bin In 
-Mentor: Ph.D. Candidate Changyoung Ryu
-Program: 2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program) 
-Chung-Ang University
+
+Advisor: Prof. Jung Bin In  
+Mentor: Ph.D. Candidate Changyoung Ryu  
+Program: 2025 Winter MeSTeR (Mechanical Engineering Short-Term Research Program)
 
 ---
 
 ## Author
 
-**Kyungwoo Lee**  
-Undergraduate Student, Mechanical Engineering
+Kyungwoo Lee  
+Undergraduate Researcher, Mechanical Engineering  
+Chung-Ang University
